@@ -1,0 +1,53 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+
+POST http://localhost:8080/recipes/add
+Content-Type: application/x-www-form-urlencoded
+
+name=test4&description=test4&categoryId=48&ingredientName=sara&ingredientName=Sandra&user
+###
+
+POST http://localhost:8080/ingredients/add
+Content-Type: application/x-www-form-urlencoded
+
+name=ingredient&amount=20
+
+###
+
+DELETE http://localhost:8080/recipes/delete/12
+
+###
+
+GET http://localhost:8080/recipes/
+
+###
+
+###
+GET http://localhost:8080/users/
+
+###
+POST http://localhost:8080/categories/add
+Content-Type: application/x-www-form-urlencoded
+
+name=Појадоци
+
+
+###
+POST http://localhost:8080/users/add
+Content-Type: application/x-www-form-urlencoded
+
+email=сс&userName=сандра&password=с
+
+###
+
+GET http://localhost:8080/users/name/bla
+
+###
+GET http://localhost:8080/users/bla/bla
+
+###

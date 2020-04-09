@@ -1,0 +1,3 @@
+[submodule "src/main/java/com/example/e_recipes/frontend"]
+	path = src/main/java/com/example/e_recipes/frontend
+	url = https://github.com/SandraA98/frontend.git
