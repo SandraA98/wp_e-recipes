@@ -46,10 +46,6 @@ public class RecipeRepositoryImpl implements RecipeRepository {
         return this.recipeRepository.findByCategoryId(id);
     }
 
-    @Override
-    public List<Recipe> searchRecipesByCat(String category) {
-        return this.recipeRepository.searchRecipesByCat(category);
-    }
 
     @Override
     public List<Recipe> findByUserId(Long id) {

@@ -14,7 +14,6 @@ class Cookbook extends Component{
     }
 
     componentDidMount() {
-        //console.log(this.props.match.params.id);
         axios.get("http://localhost:8080/cookbooks/"+this.props.match.params.id).then(response => {
             this.setState({
                 cookbook: response.data

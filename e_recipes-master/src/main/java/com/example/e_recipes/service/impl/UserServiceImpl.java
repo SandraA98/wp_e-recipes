@@ -1,13 +1,12 @@
 package com.example.e_recipes.service.impl;
 
-import com.example.e_recipes.exceptions.RecipeNotFoundException;
+import com.example.e_recipes.exceptions.ElementNotFoundException;
 import com.example.e_recipes.models.User;
 import com.example.e_recipes.repository.UserRepository;
 import com.example.e_recipes.service.UserService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -20,7 +19,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User getByUserName(String userName) {
-        return userRepository.getByUserName(userName).orElseThrow(()->new RecipeNotFoundException());
+        return userRepository.getByUserName(userName).orElseThrow(()->new ElementNotFoundException());
     }
 
     @Override
@@ -37,7 +36,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User getById(Long id) {
-        return userRepository.findById(id).orElseThrow(()-> new RecipeNotFoundException());
+        return userRepository.findById(id).orElseThrow(()-> new ElementNotFoundException());
     }
 
 

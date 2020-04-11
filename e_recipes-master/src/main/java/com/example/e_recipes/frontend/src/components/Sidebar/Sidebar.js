@@ -4,7 +4,6 @@ import "../../App.css";
 
 const Sidebar = (props) => {
 
-
         if(props.categories){
             return(
                 <div>

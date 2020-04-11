@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import axios from "axios";
-import Ingredient from "../IngredientList/Ingredients";
 import RecipeThumbnail from "../Recipe/RecipeThumbnail";
 
 
@@ -18,7 +17,6 @@ export class Category extends Component{
 
 
     componentDidMount() {
-        //console.log(this.props.match.params.id);
 
         axios.get("http://localhost:8080/categories/"+this.props.match.params.id).then(response => {
             this.setState({

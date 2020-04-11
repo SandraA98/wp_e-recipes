@@ -1,6 +1,6 @@
 package com.example.e_recipes.service.impl;
 
-import com.example.e_recipes.exceptions.RecipeNotFoundException;
+import com.example.e_recipes.exceptions.ElementNotFoundException;
 import com.example.e_recipes.models.Category;
 import com.example.e_recipes.models.Ingredient;
 import com.example.e_recipes.models.Recipe;
@@ -32,7 +32,7 @@ public class RecipeServiceImpl implements RecipeService {
 
     @Override
     public Recipe getById(Long id) {
-        return this.recipeRepository.findById(id).orElseThrow(()->new RecipeNotFoundException());
+        return this.recipeRepository.findById(id).orElseThrow(()->new ElementNotFoundException());
     }
 
     @Override
@@ -53,11 +53,6 @@ public class RecipeServiceImpl implements RecipeService {
     @Override
     public List<Recipe> getByCategoryId(Long id) {
         return this.recipeRepository.findByCategoryId(id);
-    }
-
-    @Override
-    public List<Recipe> searchRecipesByCat(String category) {
-        return this.recipeRepository.searchRecipesByCat(category);
     }
 
     @Override

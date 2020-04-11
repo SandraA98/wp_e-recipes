@@ -15,8 +15,6 @@ export class User extends Component{
     }
 
     componentDidMount() {
-        //console.log(this.props.id);
-
         axios.get("http://localhost:8080/users/"+this.props.match.params.id).then(response => {
             //console.log(response.data.id)
             this.setState({
@@ -42,9 +40,6 @@ export class User extends Component{
     render(){
         return (
             <div className="container-fluid">
-               {/* <h5 className="text-left">
-                    {this.state.user.userName}
-                </h5>*/}
                 <Link to={"/recipes/user/"+this.state.user.id+"/add"}>
                     <button className="btn btn-success float-right">
                         <span><strong>Додади нов рецепт</strong></span>

@@ -15,9 +15,6 @@ public interface JpaRecipeRepository extends JpaRepository<Recipe,Long> {
 
     List<Recipe> findByCategoryId(Long id);
 
-    @Query(value = "select r.* from recipes r left join categories c on r.category_id=c.id where c.name like :category",nativeQuery = true)
-    List<Recipe> searchRecipesByCat(String category);
-
     List<Recipe> findByUserId(Long id);
 
     List<Recipe> findAllByOrderByDateDesc();

@@ -2,9 +2,7 @@ import React, {Component} from 'react'
 import {Link,Route,Redirect} from 'react-router-dom'
 import axios from 'axios';
 import FormErrors from "../FormErrors/FormErrors";
-import {User} from "../User/User";
-import Users from "../App/App";
-import Category from "../Categories/Categories";
+
 
 export default class Login extends Component {
 
@@ -49,22 +47,15 @@ export default class Login extends Component {
         let fieldValidationErrors = this.state.formErrors;
         let usernameValid = this.state.usernameValid;
         let passwordValid = this.state.passwordValid;
-        //let userExists = this.state.userExists;
-        //let passwordMatches = this.state.passwordMatches;
-
 
         switch (fieldName) {
             case 'userName':
                 usernameValid = value.length >= 1;
-                //userExists = this.state.userExists
                 fieldValidationErrors.userName = usernameValid ? '' : 'Внеси корисничко име';
-                //fieldValidationErrors.userName = userExists ? '': 'Корисничкото име не постои';
                 break;
             case 'password':
                 passwordValid = value.length >= 1;
-                //passwordMatches = this.state.passwordMatches
                 fieldValidationErrors.password = passwordValid ? '' : 'Внеси лозинка';
-            //fieldValidationErrors.password = passwordMatches ? '': 'Лозинката е неточна';
             default:
                 break;
         }
@@ -72,8 +63,6 @@ export default class Login extends Component {
             formErrors: fieldValidationErrors,
             usernameValid: usernameValid,
             passwordValid: passwordValid,
-            //userExists: userExists,
-            //passwordMatches: passwordMatches,
         }, this.validateForm);
     }
 
@@ -90,7 +79,6 @@ export default class Login extends Component {
 
         axios.get(`http://localhost:8080/users/${this.state.userName}/${this.state.password}`).then((response) => {
             if (response.data === true) {
-                //console.log(response.data.id)
                 this.setState({
                     passwordMatches: true,
                 })
@@ -100,7 +88,6 @@ export default class Login extends Component {
         });
         axios.get(`http://localhost:8080/users/name/${this.state.userName}`).then((response) => {
             if (response.data != null) {
-                //console.log(response.data.id)
                 this.setState({
                     userExists: true,
                     userId: response.data.id

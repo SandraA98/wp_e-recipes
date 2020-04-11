@@ -5,7 +5,6 @@ import {Link,Switch, BrowserRouter as Router,Redirect,Route} from 'react-router-
 import axios from 'axios';
 import qs from 'qs';
 import Header from '../Header/header';
-import Categories from "../Categories/Categories";
 import AddRecipe from "../AddRecipe/AddRecipe";
 import Cookbook from "../Cookbook/Cookbook";
 import Cookbooks from "../Cookbooks/Cookbooks";
@@ -18,8 +17,6 @@ import Login from "../Authentication/Login";
 import Logout from "../Authentication/Logout";
 import Registration from "../Authentication/Registration";
 import User from "../User/User";
-import Users from "../Users/Users";
-
 
 
 class App extends Component {

@@ -1,7 +1,7 @@
 package com.example.e_recipes.service.impl;
 
 import com.example.e_recipes.models.Ingredient;
-import com.example.e_recipes.exceptions.RecipeNotFoundException;
+import com.example.e_recipes.exceptions.ElementNotFoundException;
 import com.example.e_recipes.models.Recipe;
 import com.example.e_recipes.repository.IngredientRepository;
 import com.example.e_recipes.service.IngredientService;
@@ -25,7 +25,7 @@ public class IngredientServiceImpl implements IngredientService {
 
     @Override
     public Ingredient getById(Long id) {
-        return ingredientRepository.getById(id).orElseThrow(()->new RecipeNotFoundException());
+        return ingredientRepository.getById(id).orElseThrow(()->new ElementNotFoundException());
     }
 
     @Override

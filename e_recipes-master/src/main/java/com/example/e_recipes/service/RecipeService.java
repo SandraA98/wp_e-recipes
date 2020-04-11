@@ -14,7 +14,6 @@ public interface RecipeService {
     void delete(Long id);
     List<Recipe> searchRecipesByIng(String ingredient);
     List<Recipe> getByCategoryId(Long id);
-    List<Recipe> searchRecipesByCat(String category);
     List<Recipe> getByUserId(Long id);
     Recipe addRecipe(String name, String description, Category category, User user);
     void addIngredient(Long recipeId, Ingredient ingredient);

@@ -65,7 +65,6 @@ public class RecipeController {
     }
 
 
-
     @DeleteMapping("/delete/{id}")
     public void deleteRecipeById(@PathVariable Long id){
         recipeService.delete(id);
@@ -74,11 +73,6 @@ public class RecipeController {
     @GetMapping(params = "ingredient")
     public List<Recipe> searchRecipesByIngredient(@RequestParam String ingredient){
         return recipeService.searchRecipesByIng(ingredient);
-    }
-
-    @GetMapping(params = "category")
-    public List<Recipe> searchRecipesByCategory(@RequestParam String category){
-        return recipeService.searchRecipesByCat(category);
     }
 
     @GetMapping("/category/{id}")

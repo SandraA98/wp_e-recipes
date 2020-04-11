@@ -14,6 +14,5 @@ public interface RecipeRepository  {
     Optional<Recipe> findById(Long id);
     void deleteById(Long id);
     List<Recipe> findByCategoryId(Long id);
-    List<Recipe> searchRecipesByCat(String category);
     List<Recipe> findByUserId(Long id);
 }

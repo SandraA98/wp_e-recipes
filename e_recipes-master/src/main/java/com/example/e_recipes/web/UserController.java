@@ -36,8 +36,8 @@ public class UserController {
     @PostMapping("/add")
     @ResponseStatus(HttpStatus.CREATED)
     public User addUser(@RequestParam String email,
-                          @RequestParam String userName,
-                          @RequestParam String password
+                        @RequestParam String userName,
+                        @RequestParam String password
     )
     {
 

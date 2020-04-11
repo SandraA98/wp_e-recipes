@@ -9,17 +9,13 @@
 POST http://localhost:8080/recipes/add
 Content-Type: application/x-www-form-urlencoded
 
-name=test4&description=test4&categoryId=48&ingredientName=sara&ingredientName=Sandra&user
+name=test4&description=test4&categoryId=48&userId=88
 ###
 
 POST http://localhost:8080/ingredients/add
 Content-Type: application/x-www-form-urlencoded
 
 name=ingredient&amount=20
-
-###
-
-DELETE http://localhost:8080/recipes/delete/12
 
 ###
 

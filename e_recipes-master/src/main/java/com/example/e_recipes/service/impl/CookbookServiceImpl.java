@@ -1,6 +1,6 @@
 package com.example.e_recipes.service.impl;
 
-import com.example.e_recipes.exceptions.RecipeNotFoundException;
+import com.example.e_recipes.exceptions.ElementNotFoundException;
 import com.example.e_recipes.models.Cookbook;
 import com.example.e_recipes.repository.CookbookRepository;
 import com.example.e_recipes.service.CookbookService;
@@ -30,7 +30,7 @@ public class CookbookServiceImpl implements CookbookService {
 
     @Override
     public Cookbook getById(Long id) {
-        return cookbookRepository.getById(id).orElseThrow(()->new RecipeNotFoundException());
+        return cookbookRepository.getById(id).orElseThrow(()->new ElementNotFoundException());
 
     }
 }
