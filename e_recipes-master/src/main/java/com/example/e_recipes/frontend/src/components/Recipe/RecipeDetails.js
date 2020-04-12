@@ -74,9 +74,17 @@ export class RecipeDetails extends Component{
                                 </div>
                                 <div className="row text-left">
                                     <span className="font-italic">Автор:&nbsp;</span> {this.state.recipe.user.userName}
-                                <a href="#" className="btn btn-outline-danger ml-auto mb-auto" title="Додади во омилени">
-                                    <i className="fa fa-heart"></i>
-                                </a>
+                                    <div className="ml-auto mb-auto">
+                                        <a href="#" className="btn btn-outline-danger m-1" title="Додади во омилени">
+                                            <i className="fa fa-heart"></i>
+                                        </a>
+                                        <a href="https://www.facebook.com/" className="btn btn-outline-primary m-1" title="Сподели на facebook">
+                                            <i className="fa fa-facebook"></i>
+                                        </a>
+                                        <a href="https://www.twitter.com/" className="btn btn-outline-primary m-1" title="Сподели на twitter">
+                                            <i className="fa fa-twitter"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
