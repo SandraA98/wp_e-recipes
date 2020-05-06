@@ -7,7 +7,7 @@ const Sidebar = (props) => {
         if(props.categories){
             return(
                 <div>
-                    <h5>Категории</h5>
+                   <div className="list-group-item list-group-item-dark">Категории</div>
                     {props.categories.map((category,index) => (
                         <div className="list-group" key={category.id}>
                             <div className="list-group-item" key={category.id}>
