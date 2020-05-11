@@ -17,6 +17,7 @@ import Login from "../Authentication/Login";
 import Logout from "../Authentication/Logout";
 import Registration from "../Authentication/Registration";
 import User from "../User/User";
+import CalCalculator from "../CalCalculator/CalCalculator";
 
 
 class App extends Component {
@@ -117,6 +118,8 @@ class App extends Component {
                                 <Cookbooks cookbooks={this.state.cookbooks}/>}>
                             </Route>
                             <Route path={"/cookbooks/:id"} component={Cookbook}>
+                            </Route>
+                            <Route path={"/calculator"} component={CalCalculator}>
                             </Route>
                             <Route path={"/checkout"} component={Checkout}/>
                             <Route path={"/login"} exact render={()=>
